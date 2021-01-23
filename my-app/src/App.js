@@ -1,11 +1,14 @@
 import './App.css';
-import ShoppingList from './ex1/shopping-list';
-import Card from './ex1/card';
+import Footer from './Ex2/Footer';
+import Tab from './Ex2/tab';
+import Titre from './Ex2/titre';
 function App() {
   return (
     <div>
-      <Card name="Panier"/>
-    <ShoppingList name="Luc" taille="50"/>
+      <Titre name='Video Games '/>
+      <Tab />
+     
+      <Footer />
     
     </div>
    
