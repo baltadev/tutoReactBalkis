@@ -1,16 +1,19 @@
 import './App.css';
-import Footer from './Ex2/Footer';
-import Tab from './Ex2/tab';
-import Titre from './Ex2/titre';
+
+import Tabb from './ex3/tabb';
+
 function App() {
   return (
     <div>
-      <Titre name='Video Games '/>
-      <Tab />
-     
-      <Footer />
-    
+      <h2> ex1</h2>
+   <h2> ex2</h2>  
+    <h2> ex3</h2>
+      <Tabb ligne='123' colonne='456'
+      />
+      <e
+      
     </div>
+  
    
     
 
