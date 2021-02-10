@@ -13,10 +13,8 @@ class List extends React.Component {
 
         
       <h2> Liste des achats </h2>
-Item1:{this.props.item};
-Item2:{this.props.item2};
-Item3:{this.props.item3};
 
+       {this.props.liste}
         </div>
         
       );

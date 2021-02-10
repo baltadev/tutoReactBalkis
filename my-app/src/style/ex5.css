@@ -1,0 +1,105 @@
+.footer{
+       background-color:salmon;
+       height:15%;
+       width: 1200px;
+       position:relative;
+       left: 30px;
+       bottom: 430px;
+       border-radius: 5px;
+       text-align: center;
+       
+}
+.page{
+    background-color: sandybrown;
+    width:1250px;
+    height:750px;
+    border-radius: 5px;
+    text-align: center;
+}
+.contenu{
+    
+        height:400px;
+       width:1000px;
+       background-color: royalblue;
+       position:relative;
+       left: 230px;
+       border-radius: 5px;
+       text-align: center;
+       
+}
+.note{
+    
+        
+     height:300px;
+    width:100px;
+    background-color:gold;
+    position:relative;
+   left: 850px;
+bottom: 319px;
+border-radius: 5px;
+}
+.header{
+        height:60px;
+       width: 1200px;
+       background-color:peru;
+       position:relative;
+       left: 30px;
+       border-radius: 5px;
+       text-align: center;
+}
+.baniere{
+    height:60px;
+    width: 1200px;
+       background-color:olive;
+       position:relative;
+       left: 30px;
+       border-radius: 5px;
+       text-align: center;
+       border: darkblue;
+       
+}
+.menu{
+        height:400px;
+       width: 120px;
+       background-color:orchid;
+       position:relative;
+       left: 30px;
+       bottom: 420px;
+       border-radius: 5px;
+    
+    }
+.articl{
+   
+    height:300px;
+       width: 800px;
+       background-color: wheat;
+       position:relative;
+       left:20px;
+       border-radius: 5px;
+       text-align: center;
+       
+           
+           
+    }
+.title{
+    
+        height:50px;
+       width: 200px;
+       background-color: gold;
+       position:relative;
+       left: 50px;
+       border-radius: 5px;
+       text-align:left;
+       
+}
+.text{
+        height:60%;
+       width:90%;
+       background-color: gold;
+       position:relative;
+       left: 50px;
+       bottom: 10px;
+       border-radius: 5px;
+       
+       
+}
