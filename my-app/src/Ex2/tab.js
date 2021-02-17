@@ -3,7 +3,7 @@ import React from 'react';
 class Tab extends React.Component {
     render() {
       return (
-        <div className="tab">
+        <div>
      <table border='2' align='center' >
   
  <tr>

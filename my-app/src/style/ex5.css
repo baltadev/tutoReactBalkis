@@ -103,3 +103,71 @@ border-radius: 5px;
        
        
 }
+.styl{
+      
+       text-align: center;
+       color:purple;
+       border-radius: 5px;
+       background-color:pink;
+       height:50%;
+       width: 50%;
+       position: relative;
+       left:25%;
+       
+
+}
+.table tr td{
+      
+border: 1px solid;
+padding: 15px;
+    
+       
+}
+.nav{
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+  
+}
+@keyframes glow {
+       from {
+              color:greenyellow;
+            text-shadow: 0 0 10px skyblue, 0 0 20px skyblue, 0 0 30px skyblue, 0 0 40px skyblue, 0 0 50px skyblue, 0 0 60px skyblue, 0 0 70px skyblue, 0 0 90px skyblue;
+          }
+          
+          to {
+             color:  #ff009d;
+            text-shadow: 0 0 20px skyblue, 0 0 30px skyblue, 0 0 40px skyblue, 0 0 50px skyblue, 0 0 60px skyblue, 0 0 70px skyblue, 0 0 80px skyblue, 0 1 90px skyblue;
+          }
+        }
+
+.play{
+font-size: 9rem;
+  text-align: center;
+   font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+
+}@keyframes slide-left {
+       from {
+         margin-left: 100%;
+         width: 300%; 
+       }
+     
+       to {
+         margin-left: 0%;
+         width: 100%;
+       }
+     }
+.slidtext{
+ width:100%;
+ font-weight: bold;
+ overflow:hidden;
+ animation: slide-left 10s;
+ font-size: 9rem;
+ font-family: Arial, Helvetica, sans-serif;
+ color:purple;
+ 
+}
