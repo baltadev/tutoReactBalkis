@@ -9,13 +9,20 @@ import Ex6 from './pages/ex6';
 import Text from './pages/text';
 import Play from './pages/play';
 import Table from './pages/table';
+import Form from './pages/form';
+import Formclick from './pages/formclick'
+import Ex8 from './pages/ex8';
+import Ex9 from './pages/ex9';
 import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import Inscri from './pages/inscri';
+ 
 
 
 
 function App() {
   return (
     <div >
+     
          <Router>
            <div>
          <nav>
@@ -66,6 +73,31 @@ function App() {
                  Text
                </Link>
              </li>
+             <li className='nav'>
+             <Link to="/form">
+                 Formulaire
+               </Link>
+             </li>
+             <li className='nav'>
+             <Link to="/formclick">
+                 Formulaire2
+               </Link>
+             </li>
+             <li className='nav'>
+             <Link to="/ex8">
+             EXercice 8
+               </Link>
+               </li>
+               <li className='nav'>
+             <Link to="/ex9">
+             EXercice 9
+               </Link>
+               </li>
+               <li className='nav'>
+             <Link to="/inscri">
+             Inscription
+               </Link>
+               </li>
            </ul>
          </nav>
       
@@ -99,12 +131,26 @@ function App() {
       <Route path='/play'>
          <Play/>
       </Route>
-
+      <Route path='/form'>
+         <Form/>
+      </Route>
+      <Route path='/formclick'>
+         <Formclick/>
+      </Route>
+      <Route path='/ex8'>
+         <Ex8/>
+      </Route>
+      <Route path='/ex9'>
+         <Ex9/>
+      </Route>
+      <Route path='/inscri'>
+         <Inscri/>
+      </Route>
     </Switch>
   
     </Router>
     
-    
+   
 </div>
   );
 }
