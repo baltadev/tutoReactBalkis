@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
@@ -25,21 +25,26 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   field: {
+   
   },
   section: {
     border: '1px solid black',
+    backgroundColor: '#F0CEA0', 
     marginTop: '20px',
     padding:  theme.spacing(2)
   },
-  segmentActions: {
+  segmentActions: { 
     margin: 'auto',
     width: '30%',
     float: 'right'
-  }
+  },
+  
+
 }));
 
 
-export default function FixedContainer({ setEditModeProps, setDataProps, data }) {
+export default function FixedContainer({ setEditModeProps, setDataProps}) {
+  const [data,setData]=useState({name:'',lastname:'',birthday:'',town:'',country:'',email:'',password:'',zipcode:'',street:'',confirmation:''})
   const classes = useStyles();
   return (
     
@@ -61,8 +66,8 @@ export default function FixedContainer({ setEditModeProps, setDataProps, data })
                     <InputLabel htmlFor="name">Name</InputLabel>
                       <Input
                        id="name"
-                       onChange={(event) => setDataProps({ name: event.target.value, lastname:data.lastname})}
-                         startAdornment={
+                       onChange={(event) => setData({...data,name:event.target.value})}
+                       startAdornment={
                            <InputAdornment position="start">
                              <AccountCircle />
                            </InputAdornment>
@@ -78,8 +83,8 @@ export default function FixedContainer({ setEditModeProps, setDataProps, data })
                  <InputLabel htmlFor="lastname"> Last Name</InputLabel>
                    <Input
                      id='lastname'
-                     onChange={(event) => setDataProps({ lastname: event.target.value, name:data.name})}
-                      startAdornment={
+                     onChange={(event) => setData({...data,lastname:event.target.value})}  
+                     startAdornment={
                         <InputAdornment position="start">
                           <AccountCircle />
                         </InputAdornment>
@@ -93,8 +98,7 @@ export default function FixedContainer({ setEditModeProps, setDataProps, data })
                 <Grid container >
                 <FormControl>
                         <TextField id='birthday' type='date' label='birthday' defaultValue='2000-01-01'
-                          onChange={(event) => setDataProps({ birthday: event.target.value, name:data.name, lastname:data.lastname})}
-                          />
+                         onChange={(event) => setData({...data,birthday:event.target.value})} />
                         <FormHelperText>choose your birthday</FormHelperText>
                 </FormControl>
             </Grid>
@@ -124,8 +128,8 @@ export default function FixedContainer({ setEditModeProps, setDataProps, data })
                     <FormControl>
                         <InputLabel htmlFor='street'>Street</InputLabel>
                         <Input id='street'
-                        onChange={(event) => setDataProps({ street: event.target.value, birthday:data.birthday, name:data.name, lastname:data.lastname})}
-                            startAdornment={
+                       onChange={(event) => setData({...data,street:event.value})}
+                          startAdornment={
                             <InputAdornment position="start">
                               <HomeIcon />
                             </InputAdornment>
@@ -136,8 +140,7 @@ export default function FixedContainer({ setEditModeProps, setDataProps, data })
                     <FormControl>
                         <InputLabel htmlFor='town'>Town</InputLabel>
                         <Input id='town'
-                         onChange={(event) => setDataProps({ town: event.target.value,street:data.street, birthday:data.birthday, name:data.name, lastname:data.lastname})}
-        
+                        onChange={(event) => setData({...data,town:event.target.value})}
                            
                             startAdornment={
                             <InputAdornment position="start">
@@ -152,8 +155,7 @@ export default function FixedContainer({ setEditModeProps, setDataProps, data })
                     <FormControl>
                         <InputLabel htmlFor='zipcode'>Zip-Code</InputLabel>
                         <Input id='zipcode'
-                         onChange={(event) => setDataProps({ Zipcode: event.target.value,town:data.town,street:data.street, birthday:data.birthday, name:data.name, lastname:data.lastname})}
-        
+                         onChange={(event) => setData({...data,zipcode:event.target.value})}
                             startAdornment={
                             <InputAdornment position="start">
                               <LocalPostOfficeIcon />
@@ -165,8 +167,7 @@ export default function FixedContainer({ setEditModeProps, setDataProps, data })
                     <FormControl>
                         <InputLabel htmlFor='country'>Country</InputLabel>
                         <Input id='counrty'
-                         onChange={(event) => setDataProps({ Country: event.target.value,zipcode:data.zipcode,town:data.town,street:data.street, birthday:data.birthday, name:data.name, lastname:data.lastname})}
-        
+                         onChange={(event) => setData({...data,country:event.target.value})}
                             startAdornment={
                             <InputAdornment position="start">
                               <LanguageIcon />
@@ -186,8 +187,7 @@ export default function FixedContainer({ setEditModeProps, setDataProps, data })
         <InputLabel htmlFor="email"> E-mail</InputLabel>
         <Input
           id="email"
-          onChange={(event) => setDataProps({ email: event.target.value,country:data.country,zipcode:data.zipcode,town:data.town,street:data.street, birthday:data.birthday, name:data.name, lastname:data.lastname})}
-        
+          onChange={(event) => setData({...data,email:event.target.value})}   
           startAdornment={
             <InputAdornment position="start">
               <AlternateEmailIcon />
@@ -203,8 +203,7 @@ export default function FixedContainer({ setEditModeProps, setDataProps, data })
         <InputLabel htmlFor="password"> Password</InputLabel>
         <Input
           id="password"
-          onChange={(event) => setDataProps({ password: event.target.value, email:data.email,country:data.country,zipcode:data.zipcode,town:data.town,street:data.street, birthday:data.birthday, name:data.name, lastname:data.lastname})}
-          
+          onChange={(event) => setData({...data,password:event.target.value})} 
           type='password'
        ww
         />
@@ -213,9 +212,11 @@ export default function FixedContainer({ setEditModeProps, setDataProps, data })
       </Grid>
       <Grid item xs={4}  className={classes.field}>
         <FormControl>
-        <InputLabel htmlFor="password confirmation"> Comfirm your Password</InputLabel>
+        <InputLabel htmlFor="confirmation"> Comfirm your Password</InputLabel>
         <Input
-          id="password Confirmation"
+          id="confirmation"
+
+          onChange={(event) => setData({...data,confirmation:event.target.value})} 
           type='password'
         
         />
@@ -226,7 +227,7 @@ export default function FixedContainer({ setEditModeProps, setDataProps, data })
       </Grid>
      
       <Grid container className={classes.segmentActions}>
-                      <Button type="submit" variant='contained' color='primary' onClick={ () => setEditModeProps(false)} >confirm</Button>
+                      <Button type="submit" variant='contained' color='primary' onClick={ () => {setEditModeProps(false);setDataProps(data);}} >confirm</Button>
                       <Button type="reset" variant='contained' color='secondary' >Reset</Button>
                   </Grid>
       

@@ -14,13 +14,13 @@ const useStyles = makeStyles((theme) => ({
 }));
   function Ex10() {
     const [ editMode, setEditMode ] = useState(true);
-    const [ data, setData ] = useState({ name: '', lastname: ''})
+    const [ data, setData ] = useState({})
     const classes = useStyles();
       return(
       <React.Fragment>
         <CssBaseline />
         <Container fixed className={classes.root}>
-        {editMode && <Inscription setEditModeProps={setEditMode} setDataProps={setData} data={data}/> } 
+        {editMode && <Inscription setEditModeProps={setEditMode} setDataProps={setData}/> } 
        {!editMode && <Confirmation title="Confirmation" data={data} />} 
       </Container>
     </React.Fragment>
