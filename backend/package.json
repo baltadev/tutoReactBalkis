@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A node application for backend ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm install express --save"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baltadev/tutoReactBalkis.git"
+  },
+  "author": "balkis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baltadev/tutoReactBalkis/issues"
+  },
+  "homepage": "https://github.com/baltadev/tutoReactBalkis#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
