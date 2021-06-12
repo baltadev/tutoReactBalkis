@@ -9,7 +9,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 
 var users = [
-    { name: 'tj', email: 'tj@sencha.com' }
+    
   , { name: 'ciaran', email: 'ciaranj@gmail.com' }
   , { name: 'aaron', email: 'aaron.heckmann+github@gmail.com' }
 ];
